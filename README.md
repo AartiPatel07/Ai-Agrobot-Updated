@@ -1,73 +1,97 @@
 🌾 AI-AgroBot – Intelligent Farming Assistant
 
-A multilingual AI-powered agricultural support system that helps farmers with crop guidance, disease detection, fertilizer suggestions, and real-time farming recommendations.
-Built using Flask, NLP, Gemini API, Image Analysis, and a Knowledge Base.
+AI-AgroBot is a multilingual, AI-powered agriculture assistant that helps farmers with crop guidance, disease detection, fertilizer recommendations, and smart farming decisions.
+It uses Flask, NLP, Knowledge Base Search, and Google Gemini (Text + Vision APIs) to deliver accurate and personalized support.
 
-📌 Table of Contents
+⭐ Features Overview
 
-About the Project
+💬 Multilingual Chatbot (English, Hindi, Tamil)
 
-Features
+📚 Offline Knowledge Base for instant responses
 
-Tech Stack
+🤖 Gemini Text API fallback for advanced answers
 
-System Architecture
+🌱 Image-based Disease Detection (Gemini Vision API)
 
-How the AI Works
+👤 User login, profile & chat history
 
-Installation
+🛠️ Admin Dashboard (KB edit, CSV upload, user management)
 
-Project Structure
+🔐 Role-based authentication
 
-Future Enhancements
+🚀 Clean UI with real-time chat
 
-Contributors
 
-License
 
-📖 About the Project
+Farmers require quick answers for pest control, nutrient deficiency, irrigation planning, and crop selection.
+AI-AgroBot solves this problem through:
 
-AI-AgroBot is a smart agriculture assistant designed to help farmers get instant answers to crop-related issues.
-Farmers can chat in their own language, upload crop images for disease detection, and receive region-based advice.
-The system also includes an Admin Panel to manage the knowledge base and users.
+Smart multilingual chat
+
+Real-time plant disease detection
+
+Personalized farming recommendations
+
+Region- and crop-based suggestions
+
+Admin tools for knowledge management
+
+This system aims to make agricultural knowledge accessible, accurate, and available 24/7.
 
 ✨ Features
-✔️ Multilingual Chatbot
+💬 1. Multilingual Chatbot
 
-Supports English, Hindi, and Tamil using NLP + translation.
+Detects language using NLP (langdetect)
 
-✔️ AI Image Analysis
+Translates using googletrans/deep-translator
 
-Upload crop images → Gemini Vision API → disease detection + suggestions.
+Replies in English, Hindi, or Tamil automatically
 
-✔️ Knowledge Base (Offline Mode)
+🌱 2. Image Analysis
 
-If stored answers exist → bot replies instantly without internet.
+Image preprocessing using Pillow (PIL)
 
-✔️ Gemini API Fallback
+Real disease/pest analysis using Gemini Vision API
 
-When KB has no answer → Gemini provides intelligent, accurate responses.
+Returns health status + treatment steps
 
-✔️ User Authentication
+📚 3. Offline Knowledge Base (KB)
 
-Register, login, manage profile, track chat history.
+Fast keyword-based matching
 
-✔️ Admin Dashboard
+Does NOT require internet
 
-Manage users, update Knowledge Base, upload CSV, monitor chat history.
+Admin can update JSON/CSV
 
-✔️ Secure & Modern UI
+🤖 4. Gemini Text API Fallback
 
-Clean interface with JavaScript-based chat and alerts.
+If offline KB has no answer →
+Gemini Text API generates an intelligent, contextual, agriculture-specific answer.
+
+👤 5. User System
+
+Registration & login
+
+Profile details (crop, region, language)
+
+Chat history stored in DB
+
+🛠️ 6. Admin Dashboard
+
+View & delete users
+
+Clear chat history
+
+Edit Knowledge Base
+
+Upload CSV data
 
 🧠 Tech Stack
 Frontend
 
-HTML5, CSS3, JavaScript
+HTML, CSS, JavaScript
 
-Responsive UI components
-
-Dynamic chat animations
+Responsive chat layout
 
 Backend
 
@@ -77,64 +101,26 @@ Flask-Login
 
 Flask-SQLAlchemy
 
-AI / ML / NLP
+Werkzeug security
 
-Gemini API (Text + Vision)
+AI / NLP
 
-langdetect → language detection
+Gemini Text API → Q&A
 
-googletrans/deep-translator → translation
+Gemini Vision API → Image diagnosis
 
-Pillow (PIL) → image preprocessing
+langdetect → Language identification
 
-Keyword-based Knowledge Base (offline AI)
+deep-translator/googletrans → Translation
+
+Pillow (PIL) → Image preprocessing
+
+Custom keyword matching KB engine
 
 Database
 
 SQLite
 
-CSV-based Knowledge Base
+JSON Knowledge Base
 
-🏗️ System Architecture
-User Interface (HTML/CSS/JS)
-        ↓
-Flask Backend (API Endpoints)
-        ↓
-NLP Layer (Language Detect + Translation)
-        ↓
-Knowledge Base (Offline Answer)
-        ↓      (If no answer)
-Gemini API (Online AI Response)
-        ↓
-Database (Users, Chats, KB)
-
-
-Image flow:
-
-User uploads image → PIL preprocess → Gemini Vision → Disease detection → Response
-
-🤖 How the AI Works
-
-User asks a question
-
-Detect language using langdetect
-
-Translate to English using Google Translate
-
-Search Knowledge Base (offline)
-
-If not found → call Gemini AI
-
-Translate answer back to user's language
-
-Save chat to database and display result
-
-Image analysis flow:
-
-User uploads crop image
-
-PIL resizes & processes image
-
-Gemini Vision analyzes disease
-
-Returns health status + suggestions
+CSV import support
