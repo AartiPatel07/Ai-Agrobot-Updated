@@ -124,7 +124,7 @@ SQLite
 JSON Knowledge Base
 
 CSV import support
-# Outputs 
+# Result/Outputs
 
 <img width="1913" height="964" alt="Screenshot 2025-12-05 132436" src="https://github.com/user-attachments/assets/f83450e3-4183-4d4e-94ee-87b6d471bc68" />
 
@@ -178,10 +178,6 @@ CSV import support
 <img width="1908" height="967" alt="Screenshot 2025-12-05 132833" src="https://github.com/user-attachments/assets/82f92348-217b-4d0d-a1fd-5f300e9fc3b4" />
 
 ----
-
-
-
-
 
 <img width="1919" height="968" alt="Screenshot 2025-12-05 133055" src="https://github.com/user-attachments/assets/a653e9a0-72ed-4287-ad49-154622ae8c1b" />
 
