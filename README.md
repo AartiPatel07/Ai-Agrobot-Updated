@@ -1,9 +1,9 @@
-#🌾 AI-AgroBot – Intelligent Farming Assistant
+# AI-AgroBot – Intelligent Farming Assistant
 
 AI-AgroBot is a multilingual, AI-powered agriculture assistant that helps farmers with crop guidance, disease detection, fertilizer recommendations, and smart farming decisions.
 It uses Flask, NLP, Knowledge Base Search, and Google Gemini (Text + Vision APIs) to deliver accurate and personalized support.
 
-⭐ Features Overview
+# Features Overview
 
 💬 Multilingual Chatbot (English, Hindi, Tamil)
 
@@ -38,7 +38,7 @@ Admin tools for knowledge management
 
 This system aims to make agricultural knowledge accessible, accurate, and available 24/7.
 
-###✨ Features
+# Features
 💬 1. Multilingual Chatbot
 
 Detects language using NLP (langdetect)
@@ -86,7 +86,7 @@ Edit Knowledge Base
 
 Upload CSV data
 
-###🧠 Tech Stack
+# Tech Stack
 Frontend
 
 HTML, CSS, JavaScript
